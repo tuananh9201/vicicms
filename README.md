@@ -1,2 +1,3 @@
-# vicicms
-cms laravel vicitech
+# vicitech CMS
+composer require vicitech/vici-cms:*
+
