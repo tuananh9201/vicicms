@@ -6,6 +6,11 @@
         "cviebrock/eloquent-sluggable": "^4.2"
     },
     "license": "no",
+     "autoload": {
+        "psr-4": {
+            "VICITECH\\ViciCMS\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "tuananh9201",
