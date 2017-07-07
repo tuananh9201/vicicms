@@ -1,0 +1,322 @@
+@import "variable"
+
+html, body
+  font-size: 13px
+
+.btn
+  background-color: $admin-dark-primary-color
+  color: $white-text
+
+#main
+  margin-left: 180px
+
+.modal-dialog
+  width: 95vw
+
+.tab-content
+  padding: 15px 0
+
+.nav-side-menu
+  overflow: auto
+  font-size: 12px
+  font-weight: 200
+  background-color: #2e353d
+  position: fixed
+  top: 0
+  width: 180px
+  height: 100%
+  color: #e1ffff
+  .brand-sidebar
+    background-color: #23282e
+    line-height: 50px
+    display: block
+    text-align: center
+    font-size: 14px
+  .toggle-btn
+    display: none
+  ul, li
+    list-style: none
+    padding: 0
+    margin: 0
+    line-height: 35px
+    cursor: pointer
+  ul :not(collapsed) .arrow:before, li :not(collapsed) .arrow:before
+    font-family: FontAwesome
+    content: "\f078"
+    display: inline-block
+    padding-left: 10px
+    padding-right: 10px
+    vertical-align: middle
+    float: right
+  ul .active, li .active
+    border-left: 3px solid #d19b3d
+    background-color: #4f5b69
+  ul .sub-menu li.active, li .sub-menu li.active, ul .sub-menu li.active a, li .sub-menu li.active a
+    color: #d19b3d
+  ul .sub-menu li, li .sub-menu li
+    background-color: #181c20
+    border: none
+    line-height: 28px
+    border-bottom: 1px solid #23282e
+    margin-left: 0px
+  ul .sub-menu li:hover, li .sub-menu li:hover
+    background-color: #020203
+  ul .sub-menu li:before
+    font-family: FontAwesome
+    content: "\f105"
+    display: inline-block
+    padding-left: 10px
+    padding-right: 10px
+    vertical-align: middle
+  li
+    .sub-menu li:before
+      font-family: FontAwesome
+      content: "\f105"
+      display: inline-block
+      padding-left: 10px
+      padding-right: 10px
+      vertical-align: middle
+    padding-left: 0px
+    border-left: 3px solid #2e353d
+    border-bottom: 1px solid #23282e
+    a
+      text-decoration: none
+      color: #e1ffff
+      i
+        padding-left: 10px
+        width: 20px
+        padding-right: 20px
+    &:hover
+      border-left: 3px solid #d19b3d
+      background-color: #4f5b69
+      -webkit-transition: all 1s ease
+      -moz-transition: all 1s ease
+      -o-transition: all 1s ease
+      -ms-transition: all 1s ease
+      transition: all 1s ease
+
+main
+  padding-left: 200px
+
+@include mobile
+  .nav-side-menu
+    position: relative
+    width: 100%
+    margin-bottom: 10px
+    .toggle-btn
+      display: block
+      cursor: pointer
+      position: absolute
+      right: 10px
+      top: 10px
+      z-index: 10 !important
+      padding: 3px
+      background-color: #ffffff
+      color: #000
+      width: 40px
+      text-align: center
+  .brand-sidebar
+    text-align: left !important
+    font-size: 22px
+    padding-left: 20px
+    line-height: 50px !important
+
+@include tablet_and_desktop
+  .nav-side-menu .menu-list .menu-content
+    display: block
+
+//login
+#login
+  width: 100vw
+  height: 100vh
+  display: table
+
+  form
+    border: 1px solid #DFDFDF
+    border-radius: 3px
+
+.lg-bgr
+  width: 100%
+  //height: 100%
+  display: table-cell
+  vertical-align: middle
+
+//user management
+
+/* Common css */
+.row
+  margin: 0 0 10px 0
+
+.vc-ic-svg
+  height: 48px
+
+.border-btn
+  border: 1px solid $admin-dark-primary-color
+
+table
+  .checkbox
+    margin: 0
+    label
+      min-height: 15px
+  img
+    height: 90px
+    width: 90px
+
+tbody
+  td
+    i
+      &:first-of-type
+        margin-right: 10px
+
+.glyphicon
+  margin-right: 3px
+
+.vc-a
+  background-color: $admin-dark-primary-color
+  color: $white-text
+  margin-top: 25px
+  display: inline-block
+  float: right
+
+  &:hover
+    text-decoration: none
+    cursor: pointer
+
+/* Switch button css */
+/* The switch - the box around the slider */
+.switch
+  position: relative
+  display: inline-block
+  width: 40px
+  height: 20px
+
+/* Hide default HTML checkbox */
+.switch
+  input
+    display: none
+
+/* The slider */
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  -webkit-transition: .4s
+  transition: .4s
+
+.slider:before
+  position: absolute
+  content: ""
+  height: 20px
+  width: 20px
+  //left: 4px
+  //bottom: 4px
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+  background-color: white
+  -webkit-transition: .4s
+  transition: .4s
+
+input:checked + .slider
+  background-color: $admin-dark-primary-color
+
+input:focus + .slider
+  box-shadow: 0 0 1px $admin-dark-primary-color
+
+input:checked + .slider:before
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+/* Rounded sliders */
+.slider.round
+  border-radius: 34px
+
+.slider.round:before
+  border-radius: 50%
+
+/* User insert page */
+#UserInsert, #ProjectDetail
+  margin: 0 15px
+
+  .border-btn
+    margin-left: 20px
+
+  form
+    .row
+      margin: 15px 0 !important
+
+    label
+      margin-top: 6px
+
+    .switch
+      margin-top: 0
+
+/* Change password page */
+
+/* Upload image midal */
+.upload-wrap
+  position: relative
+  min-height: 300px
+
+.upload-content
+  position: absolute
+  top: 30%
+  width: 100%
+  text-align: center
+
+.upload-title
+  margin-bottom: 30px
+  font-weight: 500
+  font-size: 1.1rem
+
+.upload-sub
+  margin-top: 10px
+  font-style: italic
+  font-size: .8rem
+
+.upl-detl-head, #server
+  img
+    width: 100%
+  span
+    display: block
+    &:last-of-type
+      margin-bottom: 15px
+
+.upl-detl-name, .upl-detl-title
+  font-weight: 600
+
+.upl-detl-title
+  font-size: 1.2rem
+  margin: 15px 0
+  text-transform: uppercase
+
+.upl-list-head
+  margin: 15px 0
+  input
+    width: 50%
+//.upload-img
+//  display: inline-block !important
+  //width: 150px
+
+/* pagination css */
+.pagination
+  margin: 8px 0
+  float: right
+
+.pagi-total
+  margin: 0 10px
+  font-weight: 500
+
+.pagi-nav
+  padding: 6px
+  height: 30px
+  border: 1px solid #d7d7d7
+  margin: 0 2px
+
+.curr-pagi
+  background-color: $admin-dark-primary-color
+  color: $white-text
+
